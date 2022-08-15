@@ -1,7 +1,7 @@
-from .  import Expense
-class Budgetlist():
+from . import Expense
+class BudgetList():
         def __init__(self, budget):
-            self.budget = budgetlist
+            self.budget = budget
             self.sum_expenses=0
             self.expenses= []
             self.sum_overages=0
@@ -15,19 +15,18 @@ class Budgetlist():
                  self.expenses.append(item)
                  self.sum_expenses += item
              else:
-                self.coverages.append(item)
-                self.sum_overages+=item
+                self.overages.append(item)
+                self.sum_overages += item
 
 def main():
     #using class above
-    myBudgetlist = Budgetlist(1200)
+    myBudgetList = BudgetList(1200)
     #add expenses, the last expense is 100 and that goes in overages
     expenses = Expense.Expenses()
     expenses.read_expenses('data/spending_data.csv')
     for expense in expenses.list:
-        myBudgetlist.append(expense.amount)
-
-print('The count of all expenses: ' + str(len(myBudgetlist)))
+        myBudgetList.append(expense.amount)
+print('The count of all expenses:' + str(len(myBudgetList)))
 
 if __name__ == "__main__":
     main()
