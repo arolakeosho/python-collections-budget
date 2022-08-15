@@ -26,7 +26,8 @@ def main():
     expenses.read_expenses('data/spending_data.csv')
     for expense in expenses.list:
         myBudgetList.append(expense.amount)
-print('The count of all expenses:' + str(len(myBudgetList)))
+print('The count of all expenses:')
+
 
 if __name__ == "__main__":
     main()
